@@ -570,7 +570,6 @@ button:active {
 /* .fourthSection */
 .fourthSection {
   text-align: center;
-  padding-top: 100px;
   height: 800px
 }
 
@@ -601,12 +600,13 @@ button:active {
 .territory {
   background: #054369;
   color: white;
+  height: 230px;
   border: 2px solid black;
   display: flex;
   align-items: center;
   padding: 50px 80px;
   border-radius: 20px;
-  margin-top: 100px;  
+  margin-top: 200px;  
 }
 
 .territory>.leftSide {
@@ -734,7 +734,16 @@ li:hover {
 
 
 /* responsiveness code */
-@media (min-width: 320px) and (max-width: 460px) {
+/* @media (min-width: 320px) and (max-width: 460px) { */
+@media (max-width: 460px) {
+  body{
+    /* overflow: hidden; */
+  }
+
+  .genLayout{
+    max-width: 90dvw;
+  }
+
   header {
     background-position: inherit;
   }
@@ -804,10 +813,9 @@ li:hover {
     line-height: 1.5rem;
   }
 
-  .bannerHeadBtm {
-    border: 2px solid;
+  .bannerHeadBtm { 
     display: flex;
-    padding: 10px;
+    padding: 10px 25px;
     gap: 5px;
     justify-content: space-between;
   }
@@ -856,9 +864,113 @@ li:hover {
   .lil>p {
     font-size: 5px;
   }
+  .firstSection{
+    height: auto;
+  }
 
   .firstContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .leftSideImg{
+    width: 350px;
+    margin: 0;
+  }
+
+  .review{
+    width: 250px;
+    left: 40px;
+  }
+
+  .rightSide{
+    padding-bottom: 50px;
+    /* padding-inline: 50px; */
+  }
+
+  .secondSection{
+    height: inherit;
+    padding-bottom: 150px;
+  }
+
+  .postDest{
+    grid-template-columns: 1fr;
+  }
+
+  .thirdSection{
+    height: inherit;
+    padding-block: 50px;
+  }
+
+  .salutation{
     flex-direction: column;
   }
+
+.texts{
+  text-align: center;
+}
+
+
+.Tour{
+  padding-block: 50px;
+}
+
+.Tour>h2{
+  font-size: xx-large;
+}
+
+.Tour>p{
+  width: 90dvw;
+}
+
+.benefits{
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.territory{
+  height: inherit;
+  padding: 40px 40px;
+  flex-direction: column;
+  margin-top: 30px;
+  border-radius: 10px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.territory>.leftSide>img{
+  width: 300px;
+  position:relative;
+  left: auto;
+}
+.territory>.rightSide {
+  text-align: center;
+}
+.territory>.rightSide>h2{
+  margin-top: 30px;
+  font-size: 30px;
+  width: 85dvw;
+}
+
+footer{
+  margin-top: 600px;
+}
+
+.mid{
+  font-size: x-small;
+}
+
+#bottom{
+  font-size: x-small;
+}
+#bottom>.address{
+  flex: none;
+  max-width: fit-content;
+}
+#bottom>.address>p{
+  width: 30dvw;
+}
 
 }
